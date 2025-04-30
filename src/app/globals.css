@@ -1,21 +1,31 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f9fafb;         /* light background */
+  --foreground: #1f2937;         /* dark gray text */
+  --primary: #3b82f6;            /* blue-500 */
+  --accent: #f59e0b;             /* amber-500 */
+  --card-bg: #ffffff;            /* light card background */
+  --card-border: #e5e7eb;        /* light border */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #111827;       /* dark background */
+    --foreground: #f3f4f6;       /* light text */
+    --card-bg: #1f2937;          /* dark card */
+    --card-border: #374151;      /* dark border */
   }
 }
 
@@ -23,4 +33,22 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Example usage */
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-accent {
+  background-color: var(--accent);
+  color: white;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 0.5rem;
+  padding: 1rem;
 }
