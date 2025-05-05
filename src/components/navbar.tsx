@@ -1,13 +1,18 @@
+"use client";
+
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Github, Linkedin, Mail} from "lucide-react";
+import { Menu, X, Github, Linkedin, Mail } from "lucide-react";
 
 interface NavbarProps {
-  navLinks: string[];
-  activeSection: string;
+  navLinks?: string[];
+  activeSection?: string;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ navLinks, activeSection }) => {
+const Navbar: React.FC<NavbarProps> = ({
+  navLinks = ['Home', 'About', 'Projects', 'Contact'],
+  activeSection = 'Home',
+}) => {
   const [navOpen, setNavOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
 
@@ -30,6 +35,7 @@ const Navbar: React.FC<NavbarProps> = ({ navLinks, activeSection }) => {
           boxShadow: scrollY > 20 ? '0 4px 20px rgba(0, 0, 0, 0.3)' : 'none',
         }}
       >
+        {/* Logo Section */}
         <div className="flex items-center space-x-3">
           <motion.div
             initial={{ scale: 0 }}
@@ -118,6 +124,7 @@ const Navbar: React.FC<NavbarProps> = ({ navLinks, activeSection }) => {
               </motion.div>
             ))}
 
+            {/* Social Links */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
