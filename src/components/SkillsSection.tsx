@@ -10,32 +10,14 @@ interface SkillsSectionProps {
     frameworks: string[];
     devOps: string[];
   };
+  containerVariants: any;
+  itemVariants: any;
 }
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
-};
-
-const itemVariants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: { duration: 0.6, ease: "easeOut" }
-  }
-};
-
-const SkillsSection: React.FC<SkillsSectionProps> = ({ skills }) => {
+const SkillsSection = ({ skills, containerVariants, itemVariants }: SkillsSectionProps) => {
   return (
     <section id="skills" className="py-20 bg-[#0F172A]">
       <div className="container mx-auto px-6">
-        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -46,12 +28,9 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ skills }) => {
           <h2 className="inline-block text-sm font-medium py-1 px-3 rounded-full bg-[#8B5CF6]/10 text-[#8B5CF6] mb-4">
             MY SKILLS
           </h2>
-          <h3 className="text-3xl md:text-4xl font-bold text-white">
-            Technical Expertise
-          </h3>
+          <h3 className="text-3xl md:text-4xl font-bold">Technical Expertise</h3>
         </motion.div>
 
-        {/* Skill Cards */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -59,85 +38,77 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ skills }) => {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {/* Programming Languages */}
-          <motion.div
-            variants={itemVariants}
-            className="bg-gradient-to-br from-[#1E293B] to-[#0F172A] p-6 rounded-xl border border-[#334155] hover:border-[#3B82F6]/50 transition-all duration-300"
-            whileHover={{ y: -5 }}
-          >
-            <h4 className="text-xl font-bold mb-4 text-white">Programming Languages</h4>
-            <div className="flex flex-wrap gap-3">
-              {skills.programming.map((skill, idx) => (
-                <span key={idx} className="px-3 py-1 bg-[#3B82F6]/10 text-[#3B82F6] rounded-full text-sm border border-[#3B82F6]/20">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </motion.div>
+          {/* Skill Categories */}
+          {[
+            { title: "Programming Languages", items: skills.programming, color: "#3B82F6" },
+            { title: "Machine Learning & AI", items: skills.mlTools, color: "#10B981" },
+            { title: "Data Science", items: skills.dataScience, color: "#EC4899" },
+            { title: "Frameworks & Libraries", items: skills.frameworks, color: "#8B5CF6" },
+            { title: "DevOps & Tools", items: skills.devOps, color: "#F59E0B" }
+          ].map((category, idx) => (
+            <motion.div
+              key={idx}
+              variants={itemVariants}
+              className="bg-gradient-to-br from-[#1E293B] to-[#0F172A] p-6 rounded-xl border border-[#334155] transition-all duration-300"
+              whileHover={{ y: -5, transition: { duration: 0.3 } }}
+              style={{ borderColor: `${category.color}80` }}
+            >
+              <h4 className="text-xl font-bold mb-4 text-white">{category.title}</h4>
+              <div className="flex flex-wrap gap-3">
+                {category.items.map((skill, idx) => (
+                  <span
+                    key={idx}
+                    className="px-3 py-1 rounded-full text-sm border"
+                    style={{
+                      backgroundColor: `${category.color}1A`,
+                      color: category.color,
+                      borderColor: `${category.color}33`
+                    }}
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
 
-          {/* ML Tools */}
-          <motion.div
-            variants={itemVariants}
-            className="bg-gradient-to-br from-[#1E293B] to-[#0F172A] p-6 rounded-xl border border-[#334155] hover:border-[#10B981]/50 transition-all duration-300"
-            whileHover={{ y: -5 }}
-          >
-            <h4 className="text-xl font-bold mb-4 text-white">Machine Learning & AI</h4>
-            <div className="flex flex-wrap gap-3">
-              {skills.mlTools.map((skill, idx) => (
-                <span key={idx} className="px-3 py-1 bg-[#10B981]/10 text-[#10B981] rounded-full text-sm border border-[#10B981]/20">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Data Science */}
-          <motion.div
-            variants={itemVariants}
-            className="bg-gradient-to-br from-[#1E293B] to-[#0F172A] p-6 rounded-xl border border-[#334155] hover:border-[#EC4899]/50 transition-all duration-300"
-            whileHover={{ y: -5 }}
-          >
-            <h4 className="text-xl font-bold mb-4 text-white">Data Science</h4>
-            <div className="flex flex-wrap gap-3">
-              {skills.dataScience.map((skill, idx) => (
-                <span key={idx} className="px-3 py-1 bg-[#EC4899]/10 text-[#EC4899] rounded-full text-sm border border-[#EC4899]/20">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Frameworks */}
-          <motion.div
-            variants={itemVariants}
-            className="bg-gradient-to-br from-[#1E293B] to-[#0F172A] p-6 rounded-xl border border-[#334155] hover:border-[#8B5CF6]/50 transition-all duration-300"
-            whileHover={{ y: -5 }}
-          >
-            <h4 className="text-xl font-bold mb-4 text-white">Frameworks & Libraries</h4>
-            <div className="flex flex-wrap gap-3">
-              {skills.frameworks.map((skill, idx) => (
-                <span key={idx} className="px-3 py-1 bg-[#8B5CF6]/10 text-[#8B5CF6] rounded-full text-sm border border-[#8B5CF6]/20">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* DevOps Tools */}
-          <motion.div
-            variants={itemVariants}
-            className="bg-gradient-to-br from-[#1E293B] to-[#0F172A] p-6 rounded-xl border border-[#334155] hover:border-[#F59E0B]/50 transition-all duration-300"
-            whileHover={{ y: -5 }}
-          >
-            <h4 className="text-xl font-bold mb-4 text-white">DevOps & Tools</h4>
-            <div className="flex flex-wrap gap-3">
-              {skills.devOps.map((skill, idx) => (
-                <span key={idx} className="px-3 py-1 bg-[#F59E0B]/10 text-[#F59E0B] rounded-full text-sm border border-[#F59E0B]/20">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </motion.div>
+        {/* Proficiency Meter */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="mt-16 bg-[#1E293B] p-8 rounded-xl border border-[#334155]"
+        >
+          <h4 className="text-xl font-bold mb-6 text-center">Proficiency Levels</h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+            {[
+              { skill: "Python", level: 95, color: "#3B82F6" },
+              { skill: "Machine Learning", level: 90, color: "#10B981" },
+              { skill: "Computer Vision", level: 85, color: "#8B5CF6" },
+              { skill: "JavaScript/React", level: 80, color: "#F59E0B" },
+              { skill: "NLP", level: 88, color: "#EC4899" },
+              { skill: "Data Analysis", level: 92, color: "#6366F1" }
+            ].map((item, idx) => (
+              <div key={idx} className="mb-3">
+                <div className="flex justify-between mb-1 text-white">
+                  <span>{item.skill}</span>
+                  <span>{item.level}%</span>
+                </div>
+                <div className="h-2 w-full bg-[#0F172A] rounded-full overflow-hidden">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${item.level}%` }}
+                    transition={{ duration: 1, delay: 0.2 * idx }}
+                    viewport={{ once: true }}
+                    className="h-full rounded-full"
+                    style={{ backgroundColor: item.color }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>
