@@ -1,4 +1,4 @@
-// components/navbar.tsx
+// components/Navbar.tsx
 "use client";
 
 import { useState, useEffect } from "react";
@@ -39,9 +39,7 @@ const Navbar: React.FC<NavbarProps> = ({ navLinks, activeSection }) => {
             <a
               key={link}
               href={`#${link.toLowerCase()}`}
-              className={`text-sm font-medium ${
-                activeSection === link ? "text-[#3B82F6]" : "text-gray-300"
-              } hover:text-white transition-colors`}
+              className={`text-sm font-medium ${activeSection === link ? "text-[#3B82F6]" : "text-gray-300"} hover:text-white transition-colors`}
             >
               {link}
             </a>

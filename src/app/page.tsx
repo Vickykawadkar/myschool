@@ -23,18 +23,21 @@ export default function Portfolio() {
   const [navOpen, setNavOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("HOME");
   const [viewMode, setViewMode] = useState("grid"); // grid or list
+  const [scrollYValue, setScrollYValue] = useState(0);
 
   // Handle scroll for parallax effects and active section tracking
   useEffect(() => {
     const handleScroll = () => {
-      setScrollY(window.scrollY);
+      // setScrollY(window.scrollY);
+      const currentY = window.scrollY;
+      setScrollYValue(currentY);
       
       // Determine active section based on scroll position
       const sections = document.querySelectorAll("section");
       sections.forEach((section) => {
         const sectionTop = section.offsetTop - 100;
         const sectionHeight = section.offsetHeight;
-        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+        if (currentY >= sectionTop && currentY < sectionTop + sectionHeight) {
           setActiveSection(section.id.toUpperCase());
         }
       });
@@ -88,7 +91,6 @@ export default function Portfolio() {
       {/* Fixed Navbar */}
       <Navbar navLinks={['Home', 'About', 'Services', 'Contact']} activeSection="Home" />
 
-
       {/* Hero Section */}
       <HeroSection />
 
@@ -112,7 +114,7 @@ export default function Portfolio() {
 
       {/* Scroll to top button */}
       <AnimatePresence>
-        {scrollY > 300 && (
+        {scrollY.get() > 300 && (
           <motion.button
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
