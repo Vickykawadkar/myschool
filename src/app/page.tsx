@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Github, Linkedin, Mail, ArrowRight, Download, ExternalLink, Code } from "lucide-react";
-import Navbar from "../components/Navbar"
+import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import { useScroll } from "framer-motion";
