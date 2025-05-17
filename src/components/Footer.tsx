@@ -31,7 +31,7 @@ const Footer = () => {
 
           <div className="flex space-x-6">
             <a
-              href="https://github.com/aayush598"
+              href="https://github.com/Vickykawadkar"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 bg-[#1E293B] rounded-full text-gray-400 hover:text-white hover:bg-[#3B82F6]/20 transition-all"
@@ -39,7 +39,7 @@ const Footer = () => {
               <Github size={20} />
             </a>
             <a
-              href="https://linkedin.com/in/aayush-gid-3767a2221"
+              href="https://www.linkedin.com/in/vicky-kawadkar-376459366"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 bg-[#1E293B] rounded-full text-gray-400 hover:text-white hover:bg-[#3B82F6]/20 transition-all"
@@ -47,7 +47,7 @@ const Footer = () => {
               <Linkedin size={20} />
             </a>
             <a
-              href="mailto:aayushgid598@gmail.com"
+              href="mailto:vickykawadkar779@gmail.com"
               className="p-2 bg-[#1E293B] rounded-full text-gray-400 hover:text-white hover:bg-[#3B82F6]/20 transition-all"
             >
               <Mail size={20} />

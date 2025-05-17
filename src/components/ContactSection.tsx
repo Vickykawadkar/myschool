@@ -50,10 +50,10 @@ const ContactSection = () => {
                 <div>
                   <h5 className="font-semibold">Email</h5>
                   <a
-                    href="mailto:aayushgid598@gmail.com"
+                    href="mailto:vickykawadkar779@gmail.com"
                     className="text-gray-400 hover:text-[#3B82F6] transition-colors"
                   >
-                    aayushgid598@gmail.com
+                    vickykawadkar779@gmail.com
                   </a>
                 </div>
               </div>
@@ -66,12 +66,12 @@ const ContactSection = () => {
                 <div>
                   <h5 className="font-semibold">LinkedIn</h5>
                   <a
-                    href="https://linkedin.com/in/aayush-gid-3767a2221"
+                    href="https://www.linkedin.com/in/vicky-kawadkar-376459366"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-[#3B82F6] transition-colors"
                   >
-                    linkedin.com/in/aayush-gid-3767a2221
+                    www.linkedin.com/in/vicky-kawadkar-376459366 
                   </a>
                 </div>
               </div>
@@ -84,12 +84,12 @@ const ContactSection = () => {
                 <div>
                   <h5 className="font-semibold">GitHub</h5>
                   <a
-                    href="https://github.com/aayush598"
+                    href="https://github.com/Vickykawadkar"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-[#3B82F6] transition-colors"
                   >
-                    github.com/aayush598
+                    github.com/Vickykawadkar
                   </a>
                 </div>
               </div>

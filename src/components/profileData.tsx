@@ -97,7 +97,7 @@ export const projects: Project[] = [
     description: "AI-powered ECG diagnosis system with real-time analysis capabilities and medical-grade accuracy.",
     tech: ["Python", "TensorFlow", "Streamlit", "ECG Analysis"],
     image: "/project-diagnosisx.jpg",
-    github: "https://github.com/aayush598/diagnosisx",
+    github: "https://github.com/Vickykawadkar/diagnosisx",
     demo: "https://diagnosisx-demo.vercel.app",
   },
   {
@@ -105,7 +105,7 @@ export const projects: Project[] = [
     description: "Intelligent conversational agent for preliminary medical assessments and health recommendations.",
     tech: ["Python", "LangChain", "NLP", "Healthcare"],
     image: "/project-chatbot.jpg",
-    github: "https://github.com/aayush598/health-assistant",
+    github: "https://github.com/Vickykawadkar/health-assistant",
     demo: "https://health-assistant-demo.vercel.app",
   },
   {
@@ -113,7 +113,7 @@ export const projects: Project[] = [
     description: "Computer vision system that translates hand gestures into game commands for an immersive experience.",
     tech: ["Python", "OpenCV", "Computer Vision", "HCI"],
     image: "/project-gesture.jpg",
-    github: "https://github.com/aayush598/gesture-control",
+    github: "https://github.com/Vickykawadkar/gesture-control",
     demo: "https://gesture-control-demo.vercel.app",
   },
   {
@@ -121,7 +121,7 @@ export const projects: Project[] = [
     description: "Hackathon-winning financial management tool that reduces cash flow errors by 20%.",
     tech: ["React", "Node.js", "MongoDB", "Finance"],
     image: "/project-budget.jpg",
-    github: "https://github.com/aayush598/budget-tracker",
+    github: "https://github.com/Vickykawadkar/budget-tracker",
     demo: "https://budget-tracker-demo.vercel.app",
   },
 ];

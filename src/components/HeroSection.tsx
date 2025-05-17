@@ -68,15 +68,15 @@ const HeroSection = () => {
                 transition={{ duration: 1, delay: 1.5 }}
                 className="mt-12 flex items-center gap-6"
               >
-                <a href="https://github.com/aayush598" target="_blank" rel="noopener noreferrer"
+                <a href="https://github.com/Vickykawadkar" target="_blank" rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-all">
                   <Github size={22} />
                 </a>
-                <a href="https://linkedin.com/in/aayush-gid-3767a2221" target="_blank" rel="noopener noreferrer"
+                <a href="https://www.linkedin.com/in/vicky-kawadkar-376459366" target="_blank" rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-all">
                   <Linkedin size={22} />
                 </a>
-                <a href="mailto:aayushgid598@gmail.com"
+                <a href="mailto:vickykawadkar779@gmail.com"
                   className="text-gray-400 hover:text-white transition-all">
                   <Mail size={22} />
                 </a>

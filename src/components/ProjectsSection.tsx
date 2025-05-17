@@ -190,7 +190,7 @@ const ProjectsSection: React.FC<Props> = ({ projects }) => {
           className="mt-12 text-center"
         >
           <a
-            href="https://github.com/aayush598"
+            href="https://github.com/Vickykawadkar"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-6 py-3 bg-[#1E293B] text-white font-medium rounded-lg hover:bg-[#F59E0B] transition-all"
