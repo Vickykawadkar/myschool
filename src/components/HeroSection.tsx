@@ -24,7 +24,7 @@ const HeroSection = () => {
                   transition={{ duration: 0.8, delay: 0.5 }}
                   className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 text-white"
                 >
-                  VICKY KAWADKAR<span className="text-[#3B82F6]">.</span>
+                  VICKY <span className="text-[#3B82F6]">.</span>
                 </motion.h1>
               </div>
               <motion.div
@@ -93,7 +93,7 @@ const HeroSection = () => {
             <div className="relative w-64 h-64 md:w-80 md:h-80">
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] animate-pulse blur-xl opacity-30"></div>
               <div className="absolute inset-2 rounded-full bg-[#1E293B] flex items-center justify-center overflow-hidden">
-                <span className="text-6xl font-bold">AG</span>
+                <span className="text-6xl font-bold">VK</span>
               </div>
             </div>
           </motion.div>

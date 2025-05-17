@@ -42,17 +42,12 @@ export interface Achievement {
 // Data
 
 export const education: Education[] = [
+  
   {
-    degree: "B.Tech in Electronics and Communication",
-    institution: "Indore Institute of Science and Technology",
-    location: "Indore, India",
-    period: "2022 - Present",
-  },
-  {
-    degree: "12th Grade (88%)",
+    degree: "10th Grade (81%)",
     institution: "Career Academy",
     location: "Indore, India",
-    period: "2021 - 2022",
+    period: "2024 - 2025",
   },
 ];
 

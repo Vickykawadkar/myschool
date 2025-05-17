@@ -27,9 +27,9 @@ const Navbar: React.FC<NavbarProps> = ({ navLinks, activeSection }) => {
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2 text-white font-bold text-lg">
           <div className="w-8 h-8 bg-gradient-to-br from-[#3B82F6] to-[#8B5CF6] rounded-full flex items-center justify-center">
-            <span>AG</span>
+            <span>VK</span>
           </div>
-          <span>AAYUSH<span className="text-[#3B82F6]">.DEV</span></span>
+          <span>VICKY<span className="text-[#3B82F6]">.DEV</span></span>
         </Link>
 
         {/* Desktop Menu */}

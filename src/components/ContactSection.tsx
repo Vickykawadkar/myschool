@@ -66,12 +66,12 @@ const ContactSection = () => {
                 <div>
                   <h5 className="font-semibold">LinkedIn</h5>
                   <a
-                    href="https://www.linkedin.com/in/vicky-kawadkar-376459366"
+                    href="https://www.linkedin.com/in/vicky-kawadkar-376459366/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-[#3B82F6] transition-colors"
                   >
-                    www.linkedin.com/in/vicky-kawadkar-376459366 
+                    linkdin.com/in/vicky-kawadkar-376459366
                   </a>
                 </div>
               </div>

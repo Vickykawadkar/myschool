@@ -18,10 +18,10 @@ const Footer = () => {
           >
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-gradient-to-br from-[#3B82F6] to-[#8B5CF6] rounded-full flex items-center justify-center">
-                <span className="text-lg font-bold">AG</span>
+                <span className="text-lg font-bold">VK</span>
               </div>
               <span className="text-xl font-bold tracking-wider">
-                AAYUSH<span className="text-[#3B82F6]">.DEV</span>
+                VICKY<span className="text-[#3B82F6]">.DEV</span>
               </span>
             </div>
             <p className="text-gray-400 mt-2 text-sm">
