@@ -24,7 +24,7 @@ const HeroSection = () => {
                   transition={{ duration: 0.8, delay: 0.5 }}
                   className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 text-white"
                 >
-                  AAYUSH GID<span className="text-[#3B82F6]">.</span>
+                  VICKY KAWADKAR<span className="text-[#3B82F6]">.</span>
                 </motion.h1>
               </div>
               <motion.div

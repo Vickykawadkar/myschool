@@ -57,7 +57,7 @@ const Footer = () => {
 
         <div className="border-t border-[#334155] mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm text-center md:text-left">
-            &copy; {currentYear} Aayush Gid. All rights reserved.
+            &copy; {currentYear} VICKY KAWADKAR. All rights reserved.
           </p>
           <div className="mt-4 md:mt-0">
             <a href="#" className="text-[#3B82F6] hover:underline text-sm">
